@@ -12,11 +12,12 @@ public class Mobile {
 }
 
 	public int getHeight() {
+		return 1;
 
 	}
 
 	public int getWidht() {
-
+		return 1;
 	}
 
 	public void move() {
@@ -28,7 +29,7 @@ public class Mobile {
 	}
 
 	public boolean isPlayer(int player) {
-
+		return false;
 	}
 
 	public void moveUp() {
@@ -44,24 +45,26 @@ public class Mobile {
 	}
 
 	public Color getColor() {
+		return null;
 
 	}
 
-	public Dogfight Model.
-
-	jpu2016.dogfight.model.IDogfightModel getDogfightModel() {
+	public IDogfightModel getDogfightModel() {
+		return null;
 
 	}
 
-	public void setDogfightModel(Dogfight Model.jpu2016.dogfight.model.IDogfightModel dogfightModel) {
+	public void setDogfightModel(IDogfightModel dogfightModel) {
+		return null;
 
 	}
 
 	public boolean hit() {
-
+		return false;
 	}
 
 	public boolean isWeapon() {
+		return false;
 
 	}
 
