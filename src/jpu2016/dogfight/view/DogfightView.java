@@ -5,7 +5,7 @@ import java.util.Observable;
 import jpu2016.dogfight.model.IDogfightModel;
 import jpu2016_dogfight.Control.IOrderPerformer;
 
-public class DogfightView implements Runnable {
+public class DogfightView implements IViewSystem, Runnable {
 
 	public DogfightView(final IOrderPerformer orderPerformer, final IDogfightModel dogfightModel,
 			final Observable observable) {
@@ -18,10 +18,12 @@ public class DogfightView implements Runnable {
 
 	}
 
+	@Override
 	public void displayMessage(final String message) {
 
 	}
 
+	@Override
 	public void closeAll() {
 
 	}
