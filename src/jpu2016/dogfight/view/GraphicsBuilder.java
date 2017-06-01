@@ -2,6 +2,7 @@ package jpu2016.dogfight.view;
 
 import java.awt.Graphics;
 import java.awt.image.ImageObserver;
+import java.util.Observable;
 
 import jpu2016.dogfight.model.IDogfightModel;
 import jpu2016.dogfight.model.IMobile;
@@ -12,6 +13,7 @@ public class GraphicsBuilder implements IGraphicsBuilder {
 
 	}
 
+	@Override
 	public void applyModelToGraphic(final Graphics graphics, final ImageObserver observer) {
 
 	}
@@ -24,12 +26,20 @@ public class GraphicsBuilder implements IGraphicsBuilder {
 
 	}
 
+	@Override
 	public int getGlobalWidth() {
 		return 1;
 
 	}
 
+	@Override
 	public int getGlobalHeight() {
 		return 1;
+	}
+
+	@Override
+	public void update(final Observable arg0, final Object arg1) {
+		// TODO Auto-generated method stub
+
 	}
 }
