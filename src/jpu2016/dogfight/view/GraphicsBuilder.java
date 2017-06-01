@@ -5,8 +5,9 @@ import java.awt.image.ImageObserver;
 
 import jpu2016.dogfight.model.IDogfightModel;
 import jpu2016.dogfight.model.IMobile;
+import jpu2016.gameframe.IGraphicsBuilder;
 
-public class GraphicsBuilder {
+public class GraphicsBuilder implements IGraphicsBuilder {
 	public GraphicsBuilder(final IDogfightModel dogfightModel) {
 
 	}

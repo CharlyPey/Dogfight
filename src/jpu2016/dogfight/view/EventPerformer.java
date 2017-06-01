@@ -2,10 +2,11 @@ package jpu2016.dogfight.view;
 
 import java.awt.event.KeyEvent;
 
+import jpu2016.gameframe.IEventPerformer;
 import jpu2016_dogfight.Control.IOrderPerformer;
 import jpu2016_dogfight.Control.UserOrder;
 
-public class EventPerformer {
+public class EventPerformer implements IEventPerformer {
 	public EventPerformer(final IOrderPerformer orderPerformer) {
 
 	}
