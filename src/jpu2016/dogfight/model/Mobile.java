@@ -11,7 +11,8 @@ public class Mobile implements IMobile {
 	private Dimension	dimension;
 	private String		image;
 
-	private Mobile(Direction direction, Position position, Dimension dimension, int speed, String image) {
+	public Mobile(final Direction direction, final Position position, final Dimension dimension, final int speed,
+			final String image) {
 		this.direction = direction;
 		this.position = position;
 		this.dimension = dimension;
@@ -36,12 +37,12 @@ public class Mobile implements IMobile {
 	}
 
 	@Override
-	public void placeInArea(IArea area) {
+	public void placeInArea(final IArea area) {
 
 	}
 
 	@Override
-	public boolean isPlayer(int player) {
+	public boolean isPlayer(final int player) {
 		return false;
 	}
 
@@ -67,7 +68,7 @@ public class Mobile implements IMobile {
 
 	}
 
-	public void setDogfightModel(IDogfightModel dogfightModel) {
+	public void setDogfightModel(final IDogfightModel dogfightModel) {
 
 	}
 
@@ -87,7 +88,7 @@ public class Mobile implements IMobile {
 		return this.speed;
 	}
 
-	public void setSpeed(int speed) {
+	public void setSpeed(final int speed) {
 		this.speed = speed;
 	}
 
@@ -96,7 +97,7 @@ public class Mobile implements IMobile {
 		return this.direction;
 	}
 
-	public void setDirection(Direction direction) {
+	public void setDirection(final Direction direction) {
 		this.direction = direction;
 	}
 
@@ -105,7 +106,7 @@ public class Mobile implements IMobile {
 		return this.position;
 	}
 
-	public void setPosition(Position position) {
+	public void setPosition(final Position position) {
 		this.position = position;
 	}
 
@@ -113,7 +114,7 @@ public class Mobile implements IMobile {
 		return this.dimension;
 	}
 
-	public void setDimension(Dimension dimension) {
+	public void setDimension(final Dimension dimension) {
 		this.dimension = dimension;
 	}
 
@@ -122,7 +123,7 @@ public class Mobile implements IMobile {
 		return this.image;
 	}
 
-	public void setImage(String image) {
+	public void setImage(final String image) {
 		this.image = image;
 	}
 
@@ -169,7 +170,7 @@ public class Mobile implements IMobile {
 	}
 
 	@Override
-	public void setDogfightModel(DogfightModel dogfightModel) {
+	public void setDogfightModel(final DogfightModel dogfightModel) {
 		// TODO Auto-generated method stub
 
 	}
