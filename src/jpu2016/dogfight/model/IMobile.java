@@ -1,6 +1,5 @@
 package jpu2016.dogfight.model;
 
-import com.sun.javafx.scene.paint.GradientUtils.Point;
 import com.sun.prism.Image;
 
 public interface IMobile {
@@ -9,7 +8,7 @@ public interface IMobile {
 
 	public void setDirection();
 
-	public Point getPosition();
+	public Position getPosition();
 
 	public int getWidth();
 

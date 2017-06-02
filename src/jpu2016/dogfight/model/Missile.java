@@ -1,22 +1,22 @@
 package jpu2016.dogfight.model;
 
 public class Missile extends Mobile {
-	private int		SPEED				= 4;
-	private int		WIDTH				= 30;
-	private int		MAXDISTANCETRAVELED	= 1400;
-	private String	IMAGE				= "missile";
-	private int		distanceTraveled	= 0;
+	private final static int	SPEED				= 4;
+	private final static int	WIDTH				= 30;
+	private final static int	HEIGHT				= 10;
+	private final static int	MAXDISTANCETRAVELED	= 1400;
+	private final static String	IMAGE				= "missile";
+	private final int			distanceTraveled	= 0;
 
-	public Missile(Direction direction, Dimension dimension) {
-		this.direction = direction;
-		this.dimension = dimension;
+	public Missile(final Direction direction, final Position position) {
+		super(direction, position, new Dimension(WIDTH, HEIGHT), MAXDISTANCETRAVELED, IMAGE);
 	}
 
-	public int getWidthWithADirection(Direction direction) {
+	public int getWidthWithADirection(final Direction direction) {
 		return 1;
 	}
 
-	public int getHeightWithADirection(Direction direction) {
+	public int getHeightWithADirection(final Direction direction) {
 		return 1;
 	}
 
