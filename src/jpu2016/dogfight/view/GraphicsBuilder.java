@@ -11,11 +11,11 @@ import jpu2016.gameframe.IGraphicsBuilder;
 
 public class GraphicsBuilder implements IGraphicsBuilder {
 	private final IDogfightModel	dogfightModel;
-	private final BufferedImage		emptySky;
+	private BufferedImage			emptySky;
 
 	public GraphicsBuilder(final IDogfightModel dogfightModel) {
 		this.dogfightModel = dogfightModel;
-		this.emptySky = new BufferedImage(null, null, false, null);
+		this.buildEmptySky();
 	}
 
 	@Override
@@ -24,7 +24,7 @@ public class GraphicsBuilder implements IGraphicsBuilder {
 	}
 
 	private void buildEmptySky() {
-
+		this.setEmptySky(new BufferedImage(this.getGlobalWidth(), this.getGlobalHeight(), Transparency.TRANSLUCENT));
 	}
 
 	private void drawMobile(final IMobile mobile, final Graphics graphics, final ImageObserver observer) {
@@ -32,43 +32,48 @@ public class GraphicsBuilder implements IGraphicsBuilder {
 				Transparency.TRANSLUCENT);
 		final Graphics graphicsMobile = imageMobile.getGraphics();
 		graphicsMobile.drawImage(mobile.getImage(), 0, 0, mobile.getWidth(), mobile.getHeight(), observer);
-		graphics.drawImage(imageMobile, mobile.getPosition().getX(), mobile.getPosition().getY(), observer);
-		final boolean isHorizontalOut = (mobile.getPosition().getX() + mobile.getWidth()) > this.dogfightModel.getArea()
-				.getWidth();
-		final boolean isVerticalOut = (mobile.getPosition().getY() + mobile.getHeight()) > this.dogfightModel.getArea()
-				.getHeight();
+		graphics.drawImage(imageMobile, (int) mobile.getPosition().getX(), (int) mobile.getPosition().getY(), observer);
+		final boolean isHorizontalOut = (mobile.getPosition().getX() + mobile.getWidth()) > this.getGlobalWidth();
+		final boolean isVerticalOut = (mobile.getPosition().getY() + mobile.getHeight()) > this.getGlobalHeight();
 		if (isHorizontalOut) {
 			final BufferedImage imageMobileH = imageMobile.getSubimage(
-					this.dogfightModel.getArea().getWidth() - mobile.getPosition().getX(), 0,
-					(mobile.getWidth() - this.dogfightModel.getArea().getWidth()) + mobile.getPosition().getX(),
+					this.getGlobalWidth() - (int) mobile.getPosition().getX(), 0,
+					(mobile.getWidth() - this.getGlobalWidth()) + (int) mobile.getPosition().getX(),
 					mobile.getHeight());
-			graphics.drawImage(imageMobileH, 0, mobile.getPosition().getY(), observer);
+			graphics.drawImage(imageMobileH, 0, (int) mobile.getPosition().getY(), observer);
 		}
 		if (isVerticalOut) {
 			final BufferedImage imageMobileV = imageMobile.getSubimage(0,
-					this.dogfightModel.getArea().getHeight() - mobile.getPosition().getY(), mobile.getWidth(),
-					(mobile.getHeight() - this.dogfightModel.getArea().getHeight()) + mobile.getPosition().getY());
-			graphics.drawImage(imageMobileV, mobile.getPosition().getX(), 0, observer);
+					this.getGlobalHeight() - (int) mobile.getPosition().getY(), mobile.getWidth(),
+					(mobile.getHeight() - this.getGlobalHeight()) + (int) mobile.getPosition().getY());
+			graphics.drawImage(imageMobileV, (int) mobile.getPosition().getX(), 0, observer);
 		}
 		if (isHorizontalOut && isVerticalOut) {
 			final BufferedImage imageMobileHV = imageMobile.getSubimage(
-					this.dogfightModel.getArea().getWidth() - mobile.getPosition().getX(),
-					this.dogfightModel.getArea().getHeight() - mobile.getPosition().getY(),
-					(mobile.getWidth() - this.dogfightModel.getArea().getWidth()) + mobile.getPosition().getX(),
-					(mobile.getHeight() - this.dogfightModel.getArea().getHeight()) + mobile.getPosition().getY());
+					this.getGlobalWidth() - (int) mobile.getPosition().getX(),
+					this.getGlobalHeight() - (int) mobile.getPosition().getY(),
+					(mobile.getWidth() - this.getGlobalWidth()) + (int) mobile.getPosition().getX(),
+					(mobile.getHeight() - this.getGlobalHeight()) + (int) mobile.getPosition().getY());
 			graphics.drawImage(imageMobileHV, 0, 0, observer);
 		}
 	}
 
 	@Override
 	public int getGlobalWidth() {
-		return 1;
-
+		return (int) this.dogfightModel.getArea().getDimension().getWidth();
 	}
 
 	@Override
 	public int getGlobalHeight() {
-		return 1;
+		return (int) this.dogfightModel.getArea().getDimension().getHeight();
+	}
+
+	public BufferedImage getEmptySky() {
+		return this.emptySky;
+	}
+
+	public void setEmptySky(final BufferedImage emptySky) {
+		this.emptySky = emptySky;
 	}
 
 }

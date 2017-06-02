@@ -1,6 +1,7 @@
 package jpu2016.gameframe;
 
 import java.awt.Graphics;
+import java.awt.image.ImageObserver;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -25,7 +26,8 @@ public class GamePanel extends JPanel implements Observer {
 
 	@Override
 	public void update(final Observable arg0, final Object arg1) {
-		this.graphicsBuilder.applyModelToGraphic(graphics, observer);
+		final ImageObserver observer = null;
+		this.graphicsBuilder.applyModelToGraphic(this.getGraphics(), observer);
 	}
 
 	public IGraphicsBuilder getGraphicsBuilder() {
