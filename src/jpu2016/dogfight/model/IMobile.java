@@ -1,6 +1,11 @@
 package jpu2016.dogfight.model;
 
+import com.sun.javafx.scene.paint.GradientUtils.Point;
+import com.sun.prism.Image;
+
 public interface IMobile {
+	private DogfightModel dogfightModel;
+
 	public Direction getDirection();
 
 	public void setDirection();
@@ -21,7 +26,7 @@ public interface IMobile {
 
 	public boolean isPlayer(int payer);
 
-	public setDogfightModel( Dogfight Model.jpu2016.dogfight.model.DogfightMode dogfightModel);
+	public void setDogfightModel(DogfightModel dogfightModel);
 
 	public boolean hit();
 
