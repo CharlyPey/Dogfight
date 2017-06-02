@@ -3,7 +3,7 @@ package jpu2016.dogfight.controller;
 import jpu2016.dogfight.model.IDogfightModel;
 import jpu2016.dogfight.view.IViewSystem;
 
-public class DogfightController implements IOrderPerformer extends Observable {
+public class DogfightController implements IOrderPerformer {
 
 	private final int				TIME_SLEEP	= 30;
 	private final IDogfightModel	dogfightModel;
