@@ -11,6 +11,7 @@ public class DogfightController implements IOrderPerformer {
 
 	}
 
+	@Override
 	public void orderPerform(final UserOrder userOrder) {
 
 	}
@@ -30,21 +31,4 @@ public class DogfightController implements IOrderPerformer {
 
 	}
 
-	@Override
-	public void orderPerform(final jpu2016.jpu2016.dogfight.controller.UserOrder aUserOrder) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void orderPerform(final jpu2016.jpu2016.dogfight.controller.UserOrder aUserOrder) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void orderPerform(final jpu2016.jpu2016.dogfight.controller.UserOrder aUserOrder) {
-		// TODO Auto-generated method stub
-
-	}
 }
