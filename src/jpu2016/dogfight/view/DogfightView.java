@@ -16,7 +16,7 @@ public class DogfightView implements IViewSystem, Runnable {
 			final Observable observable) {
 		this.eventPerformer = new EventPerformer(orderPerformer);
 		this.graphicsBuilder = new GraphicsBuilder(dogfightModel);
-		this.gameFrame = new GameFrame();
+		this.gameFrame = new GameFrame("Dogfight", this.eventPerformer, this.graphicsBuilder, observable);
 	}
 
 	@Override
