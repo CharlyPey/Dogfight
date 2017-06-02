@@ -10,7 +10,6 @@ public class Missile extends Mobile {
 
 	public Missile(final Direction direction, final Position position) {
 		super(direction, position, new Dimension(WIDTH, HEIGHT), MAXDISTANCETRAVELED, IMAGE);
-		this.direction = direction;
 	}
 
 	public int getWidthWithADirection(final Direction direction) {
