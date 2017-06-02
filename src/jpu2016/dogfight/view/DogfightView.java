@@ -2,8 +2,8 @@ package jpu2016.dogfight.view;
 
 import java.util.Observable;
 
+import jpu2016.dogfight.controller.IOrderPerformer;
 import jpu2016.dogfight.model.IDogfightModel;
-import jpu2016_dogfight.Control.IOrderPerformer;
 
 public class DogfightView implements IViewSystem, Runnable {
 
