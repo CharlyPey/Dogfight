@@ -1,6 +1,7 @@
 package jpu2016.dogfight.model;
 
 import java.awt.Dimension;
+import java.awt.Image;
 
 import javax.imageio.ImageIO;
 

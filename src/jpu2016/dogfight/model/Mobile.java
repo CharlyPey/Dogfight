@@ -1,17 +1,18 @@
 package jpu2016.dogfight.model;
 
 import java.awt.Color;
+import java.awt.Point;
 
-import com.sun.javafx.scene.paint.GradientUtils.Point;
+import com.sun.prism.Image;
 
 public class Mobile implements IMobile {
 	private int			speed;
 	protected Direction	direction;
 	private Position	position;
 	private Dimension	dimension;
-	private String		image;
+	private Image		image;
 
-	private Mobile(Direction direction, Position position, Dimension dimension, int speed, String image) {
+	private Mobile(Direction direction, Position position, Dimension dimension, int speed, Image image) {
 		this.direction = direction;
 		this.position = position;
 		this.dimension = dimension;
@@ -101,11 +102,11 @@ public class Mobile implements IMobile {
 	}
 
 	@Override
-	public Position getPosition() {
+	public Point getPosition() {
 		return this.position;
 	}
 
-	public void setPosition(Position position) {
+	public void setPosition(Point position) {
 		this.position = position;
 	}
 
@@ -118,7 +119,7 @@ public class Mobile implements IMobile {
 	}
 
 	@Override
-	public String getImage() {
+	public Image getImage() {
 		return this.image;
 	}
 
