@@ -10,7 +10,6 @@ public class DogfightController implements IOrderPerformer {
 	private IViewSystem				viewSystem;
 
 	public DogfightController(final IDogfightModel dogfightModel) {
-
 		this.dogfightModel = dogfightModel;
 	}
 
