@@ -5,10 +5,11 @@ import java.util.Observable;
 
 public class DogfightModel extends Observable implements IDogfightModel {
 
-	private ArrayList<IMobile> mobiles;
+	private ArrayList<IMobile>	mobiles;
+	private Sky					sky;
 
 	public DogfightModel() {
-
+		this.sky = new Sky(dimension);
 	}
 
 	@Override

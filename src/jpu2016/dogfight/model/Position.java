@@ -7,10 +7,18 @@ public class Position {
 	private double	maxY;
 
 	public Position(double x, double y, double maxX, double maxY) {
+		this.x = x;
+		this.y = y;
+		this.maxX = maxY;
+		this.maxY = maxY;
 
 	}
 
 	public Position(Position position) {
+		this.x = position.x;
+		this.y = position.y;
+		this.maxX = position.maxX;
+		this.maxY = position.maxY;
 
 	}
 
@@ -19,7 +27,7 @@ public class Position {
 	}
 
 	public void setX(double x) {
-		this.x = x;
+		this.x = (x + this.maxX) % this.maxX;
 	}
 
 	public double getY() {
@@ -27,7 +35,7 @@ public class Position {
 	}
 
 	public void setY(double y) {
-		this.y = y;
+		this.y = (y + this.maxY) % this.maxY;
 	}
 
 	protected void setMaxX(double maxX) {

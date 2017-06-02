@@ -24,12 +24,12 @@ public class Sky implements IArea {
 
 	@Override
 	public Dimension getDimension() {
-		return null;
+		return this.dimension;
 	}
 
 	@Override
 	public Image getImage() {
-		return null;
+		return this.image;
 
 	}
 
