@@ -33,6 +33,10 @@ public class Mobile implements IMobile {
 
 	}
 
+	public void moveDown() {
+
+	}
+
 	public void moveLeft() {
 
 	}
@@ -139,7 +143,6 @@ public class Mobile implements IMobile {
 
 	@Override
 	public boolean hit() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

@@ -10,4 +10,9 @@ public class Cloud extends Mobile {
 		super(direction, position, new Dimension(WIDTH, HEIGHT), SPEED, IMAGE);
 	}
 
+	@Override
+	public boolean hit() {
+		return false;
+	}
+
 }
