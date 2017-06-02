@@ -2,13 +2,16 @@ package jpu2016.dogfight.model;
 
 import java.awt.Dimension;
 
-import com.sun.prism.Image;
+import javax.imageio.ImageIO;
 
 public class Sky implements IArea {
-	private Dimension dimension;
+	private Dimension	dimension;
+	private Image		image;
 
 	public Sky(Dimension dimension) {
 		this.dimension = dimension;
+		this.image = ImageIO.read(input);
+
 	}
 
 	@Override

@@ -1,7 +1,8 @@
 package jpu2016.dogfight.model;
 
+import java.awt.Color;
+
 import com.sun.javafx.scene.paint.GradientUtils.Point;
-import com.sun.prism.Image;
 
 public class Mobile implements IMobile {
 	private int			speed;

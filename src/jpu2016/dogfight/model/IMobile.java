@@ -4,7 +4,6 @@ import com.sun.javafx.scene.paint.GradientUtils.Point;
 import com.sun.prism.Image;
 
 public interface IMobile {
-	private DogfightModel dogfightModel;
 
 	public Direction getDirection();
 
