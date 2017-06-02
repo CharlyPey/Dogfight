@@ -9,6 +9,7 @@ public class DogfightController implements IOrderPerformer {
 
 	public DogfightController(final IDogfightModel dogfightModel) {
 
+		this.dogfightModel = dogfightModel;
 	}
 
 	@Override
@@ -21,7 +22,6 @@ public class DogfightController implements IOrderPerformer {
 	}
 
 	public void setViewSystem(final IViewSystem viewSystem) {
-		return ViewSystem;
 	}
 
 	public void lauchMissile(final int player) {
@@ -31,4 +31,6 @@ public class DogfightController implements IOrderPerformer {
 
 	}
 
+	private final IDogfightModel dogfightModel;
+	private IViewSystem viewSystem;
 }
