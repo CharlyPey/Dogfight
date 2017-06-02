@@ -5,12 +5,15 @@ import jpu2016.dogfight.view.IViewSystem;
 
 public class DogfightController implements IOrderPerformer extends Observable {
 
-	private final int TIME_SLEEP = 30;
+	private final int				TIME_SLEEP	= 30;
+	private final IDogfightModel	dogfightModel;
+	private IViewSystem				viewSystem;
 
 	public DogfightController(final IDogfightModel dogfightModel) {
-
+		this.dogfightModel = dogfightModel;
 	}
 
+	@Override
 	public void orderPerform(final UserOrder userOrder) {
 
 	}
@@ -20,7 +23,6 @@ public class DogfightController implements IOrderPerformer extends Observable {
 	}
 
 	public void setViewSystem(final IViewSystem viewSystem) {
-		return ViewSystem;
 	}
 
 	public void lauchMissile(final int player) {
@@ -30,21 +32,4 @@ public class DogfightController implements IOrderPerformer extends Observable {
 
 	}
 
-	@Override
-	public void orderPerform(final jpu2016.jpu2016.dogfight.controller.UserOrder aUserOrder) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void orderPerform(final jpu2016.jpu2016.dogfight.controller.UserOrder aUserOrder) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void orderPerform(final jpu2016.jpu2016.dogfight.controller.UserOrder aUserOrder) {
-		// TODO Auto-generated method stub
-
-	}
 }

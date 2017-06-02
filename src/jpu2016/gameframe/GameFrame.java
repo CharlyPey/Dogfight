@@ -6,11 +6,13 @@ import java.util.Observable;
 
 public class GameFrame extends Observable implements KeyListener {
 
-	private final GamePanel gamePanel;
+	private final GamePanel			gamePanel;
+	private final IEventPerformer	eventPerformer;
 
 	public GameFrame(final String title, final IEventPerformer performer, final IGraphicsBuilder graphicBuilder,
 			final Observable observable) {
 		this.gamePanel = new GamePanel(graphicBuilder);
+		this.eventPerformer = performer;
 	}
 
 	@Override
