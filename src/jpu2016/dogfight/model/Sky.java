@@ -1,6 +1,5 @@
 package jpu2016.dogfight.model;
 
-import java.awt.Dimension;
 import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
@@ -12,8 +11,8 @@ public class Sky implements IArea {
 	private final Dimension	dimension;
 	private Image			image	= null;
 
-	public Sky(final Dimension dimension) {
-		this.dimension = dimension;
+	public Sky(final Dimension dimSky) {
+		this.dimension = dimSky;
 		try {
 			this.image = ImageIO.read(this.file);
 		} catch (final IOException e) {
@@ -23,14 +22,15 @@ public class Sky implements IArea {
 	}
 
 	@Override
-	public Dimension getDimension() {
-		return this.dimension;
-	}
-
-	@Override
 	public Image getImage() {
 		return this.image;
 
+	}
+
+	@Override
+	public Dimension getDimension() {
+		// TODO Auto-generated method stub
+		return this.dimension;
 	}
 
 }

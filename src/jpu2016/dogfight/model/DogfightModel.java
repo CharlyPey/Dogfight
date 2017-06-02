@@ -9,7 +9,11 @@ public class DogfightModel extends Observable implements IDogfightModel {
 	private Sky					sky;
 
 	public DogfightModel() {
-		this.sky = new Sky(dimension);
+		Dimension DimSky;
+		DimSky = new Dimension(50, 50);
+		this.sky = new Sky(DimSky);
+		ArrayList<IMobile> mobiles = new ArrayList<IMobile>();
+		mobiles.add(new Plane(1, Direction.LEFT, new Position(5, 5, 30, 50), "F4U_LEFT"));
 	}
 
 	@Override
