@@ -5,6 +5,7 @@ import java.awt.Transparency;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
 
+import fr.exia.showboarddemo.Monster;
 import jpu2016.dogfight.model.IDogfightModel;
 import jpu2016.dogfight.model.IMobile;
 import jpu2016.gameframe.IGraphicsBuilder;
@@ -20,7 +21,9 @@ public class GraphicsBuilder implements IGraphicsBuilder {
 
 	@Override
 	public void applyModelToGraphic(final Graphics graphics, final ImageObserver observer) {
-
+		for (final IMobile mobile : this.dogfightModel.getMobiles()) {
+			this.drawMobile(final IMobile mobile, final Graphics graphics, final ImageObserver observer);
+		}
 	}
 
 	private void buildEmptySky() {
