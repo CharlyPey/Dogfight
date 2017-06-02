@@ -6,7 +6,7 @@ import com.sun.javafx.scene.paint.GradientUtils.Point;
 
 public class Mobile implements IMobile {
 	private int			speed;
-	protected Direction	direction;
+	private Direction	direction;
 	private Position	position;
 	private Dimension	dimension;
 	private String		image;
