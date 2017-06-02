@@ -3,7 +3,6 @@ package jpu2016.dogfight.view;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
-import java.util.Observable;
 
 import jpu2016.dogfight.model.IDogfightModel;
 import jpu2016.dogfight.model.IMobile;
@@ -42,9 +41,4 @@ public class GraphicsBuilder implements IGraphicsBuilder {
 		return 1;
 	}
 
-	@Override
-	public void update(final Observable arg0, final Object arg1) {
-		// TODO Auto-generated method stub
-
-	}
 }
