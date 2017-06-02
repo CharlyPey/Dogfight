@@ -2,14 +2,14 @@ package jpu2016.dogfight.model;
 
 import java.awt.Color;
 
-import com.sun.javafx.scene.paint.GradientUtils.Point;
+import com.sun.prism.Image;
 
 public class Mobile implements IMobile {
-	private int			speed;
-	private Direction	direction;
-	private Position	position;
-	private Dimension	dimension;
-	private String		image;
+	private int				speed;
+	private Direction		direction;
+	private Position		position;
+	private Dimension		dimension;
+	private final String	image;
 
 	public Mobile(final Direction direction, final Position position, final Dimension dimension, final int speed,
 			final String image) {
@@ -21,29 +21,8 @@ public class Mobile implements IMobile {
 
 	}
 
-	@Override
-	public int getHeight() {
-		return 1;
-
-	}
-
 	public int getWidht() {
 		return 1;
-	}
-
-	@Override
-	public void move() {
-
-	}
-
-	@Override
-	public void placeInArea(final IArea area) {
-
-	}
-
-	@Override
-	public boolean isPlayer(final int player) {
-		return false;
 	}
 
 	public void moveUp() {
@@ -72,38 +51,12 @@ public class Mobile implements IMobile {
 
 	}
 
-	@Override
-	public boolean hit() {
-		return false;
-	}
-
-	@Override
-	public boolean isWeapon() {
-		return false;
-
-	}
-
-	@Override
-	public int getSpeed() {
-		return this.speed;
-	}
-
 	public void setSpeed(final int speed) {
 		this.speed = speed;
 	}
 
-	@Override
-	public Direction getDirection() {
-		return this.direction;
-	}
-
 	public void setDirection(final Direction direction) {
 		this.direction = direction;
-	}
-
-	@Override
-	public Position getPosition() {
-		return this.position;
 	}
 
 	public void setPosition(final Position position) {
@@ -119,12 +72,9 @@ public class Mobile implements IMobile {
 	}
 
 	@Override
-	public String getImage() {
-		return this.image;
-	}
-
-	public void setImage(final String image) {
-		this.image = image;
+	public Direction getDirection() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
@@ -134,7 +84,7 @@ public class Mobile implements IMobile {
 	}
 
 	@Override
-	public Point getPosition() {
+	public Position getPosition() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -146,33 +96,57 @@ public class Mobile implements IMobile {
 	}
 
 	@Override
-	public Image getImage() {
+	public int getHeight() {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
 	@Override
-	public void setDogfightModel() {
+	public int getSpeed() {
 		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Point getPosition() {
-		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
 	@Override
 	public Image getImage() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void placeInArea(final IArea area) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public boolean isPlayer(final int payer) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	@Override
 	public void setDogfightModel(final DogfightModel dogfightModel) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public boolean hit() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isWeapon() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
