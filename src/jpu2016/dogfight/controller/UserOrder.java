@@ -1,6 +1,4 @@
-package jpu2016_dogfight.Control;
-
-import jpu2016.dogfight.controller.IUserOrder;
+package jpu2016.dogfight.controller;
 
 public class UserOrder implements IUserOrder {
 
