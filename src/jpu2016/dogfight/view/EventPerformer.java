@@ -7,8 +7,8 @@ import jpu2016.dogfight.controller.UserOrder;
 import jpu2016.gameframe.IEventPerformer;
 
 public class EventPerformer implements IEventPerformer {
-	private final IOrderPerformer orderPerformer;
-	private final UserOrder userOrder;
+	private final IOrderPerformer	orderPerformer;
+	private final UserOrder			userOrder;
 
 	public EventPerformer(final IOrderPerformer orderPerformer) {
 		this.orderPerformer = orderPerformer;
