@@ -5,7 +5,9 @@ import jpu2016.dogfight.view.IViewSystem;
 
 public class DogfightController implements IOrderPerformer {
 
-	private final int TIME_SLEEP = 30;
+	private final int				TIME_SLEEP	= 30;
+	private final IDogfightModel	dogfightModel;
+	private IViewSystem				viewSystem;
 
 	public DogfightController(final IDogfightModel dogfightModel) {
 
@@ -31,6 +33,4 @@ public class DogfightController implements IOrderPerformer {
 
 	}
 
-	private final IDogfightModel dogfightModel;
-	private IViewSystem viewSystem;
 }
