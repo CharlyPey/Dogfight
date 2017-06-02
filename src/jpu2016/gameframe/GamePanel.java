@@ -9,9 +9,11 @@ public class GamePanel extends JPanel {
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = -5123288060403239869L;
+	private static final long		serialVersionUID	= -5123288060403239869L;
+	private final IGraphicsBuilder	graphicsBuilder;
 
 	public GamePanel(final IGraphicsBuilder graphicBuilder) {
+		this.graphicsBuilder = graphicBuilder;
 
 	}
 
