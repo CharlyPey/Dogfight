@@ -2,18 +2,17 @@ package jpu2016.dogfight.model;
 
 import java.awt.Color;
 
-import com.sun.prism.Image;
+import com.sun.javafx.scene.paint.GradientUtils.Point;
 
 public class Mobile implements IMobile {
 	private int			speed;
 	private Direction	direction;
 	private Position	position;
 	private Dimension	dimension;
-	private Image		image;
+	private String		image;
 
 	public Mobile(final Direction direction, final Position position, final Dimension dimension, final int speed,
-			final Image image) {
-
+			final String image) {
 		this.direction = direction;
 		this.position = position;
 		this.dimension = dimension;
@@ -102,6 +101,11 @@ public class Mobile implements IMobile {
 		this.direction = direction;
 	}
 
+	@Override
+	public Position getPosition() {
+		return this.position;
+	}
+
 	public void setPosition(final Position position) {
 		this.position = position;
 	}
@@ -115,11 +119,11 @@ public class Mobile implements IMobile {
 	}
 
 	@Override
-	public Image getImage() {
+	public String getImage() {
 		return this.image;
 	}
 
-	public void setImage(final Image image) {
+	public void setImage(final String image) {
 		this.image = image;
 	}
 
@@ -130,7 +134,7 @@ public class Mobile implements IMobile {
 	}
 
 	@Override
-	public Position getPosition() {
+	public Point getPosition() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -139,6 +143,30 @@ public class Mobile implements IMobile {
 	public int getWidth() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public Image getImage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setDogfightModel() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Point getPosition() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Image getImage() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
