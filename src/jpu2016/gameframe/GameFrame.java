@@ -11,13 +11,28 @@ public class GameFrame extends JFrame implements KeyListener {
 	 *
 	 */
 	private static final long	serialVersionUID	= -5205816999645121205L;
-	private final GamePanel		gamePanel;
 	private IEventPerformer		eventPerformer;
 
 	public GameFrame(final String title, final IEventPerformer performer, final IGraphicsBuilder graphicBuilder,
 			final Observable observable) {
-		this.gamePanel = new GamePanel(graphicBuilder);
+		new GamePanel(graphicBuilder);
 		this.setEventPerformer(performer);
+
+		this.setTitle(title);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
+		this.addKeyListener(this);
+		this.setVisible(true);
+
+		final GamePanel gamePanel = new GamePanel(graphicBuilder);
+		this.setContentPane(gamePanel);
+		this.setSize(graphicBuilder.getGlobalWidth() + this.getInsets().left + this.getInsets().right,
+				graphicBuilder.getGlobalHeight() + this.getInsets().top + this.getInsets().bottom);
+		this.setLocationRelativeTo(null);
+		observable.addObserver(gamePanel);
+
+		this.setVisible(true);
+
 	}
 
 	@Override

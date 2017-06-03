@@ -20,12 +20,17 @@ public class GraphicsBuilder implements IGraphicsBuilder {
 
 	@Override
 	public void applyModelToGraphic(final Graphics graphics, final ImageObserver observer) {
+		graphics.drawImage(this.emptySky, 0, 0, observer);
 		for (final IMobile mobile : this.dogfightModel.getMobiles()) {
 			this.drawMobile(mobile, graphics, observer);
 		}
 	}
 
 	private void buildEmptySky() {
+		this.emptySky = new BufferedImage(this.getGlobalWidth(), this.getGlobalHeight(), BufferedImage.TYPE_INT_RGB);
+		final Graphics graphics = this.emptySky.getGraphics();
+		graphics.drawImage(this.dogfightModel.getArea().getImage(), 0, 0, this.getGlobalWidth(), this.getGlobalHeight(),
+				null);
 		this.setEmptySky(new BufferedImage(this.getGlobalWidth(), this.getGlobalHeight(), Transparency.TRANSLUCENT));
 	}
 
