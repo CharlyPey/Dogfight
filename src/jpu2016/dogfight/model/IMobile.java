@@ -1,6 +1,6 @@
 package jpu2016.dogfight.model;
 
-import com.sun.prism.Image;
+import java.awt.Image;
 
 public interface IMobile {
 
